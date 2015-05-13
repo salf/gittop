@@ -32,6 +32,7 @@ class Rating
 
   def print_rating(chart)
     chart.select!{|k| !k.is_a?(Exception)}
+    return puts 'No results for entered account(s)' if chart.empty?
     chart.sort_by!{|k| k[:counts]}.reverse!
     max_length = chart.map{|a| a[:account]}.max_by(&:length).length
     chart.each{|e| printf "%-#{max_length + 4}s %s\n", e[:account], e[:counts] }
