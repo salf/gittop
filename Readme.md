@@ -14,6 +14,10 @@ And then execute:
 
     $ bin/gittop
 
+Result:
+
+![Result](https://dl.dropboxusercontent.com/u/2759137/gittop.png "Result screenshot")
+
 ## Contributing
 
 1. Fork it ( https://github.com/salf/gittop/fork )
