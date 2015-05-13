@@ -8,6 +8,11 @@ In program/gem folder
 
     $ bundle
 
+[Generate](https://github.com/settings/tokens) your own github access token.
+
+And put it in config:
+`config/github_credentials.yml`
+
 ## Usage
 
 And then execute:

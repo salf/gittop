@@ -1,4 +1,3 @@
-# require 'github_api'
 require 'octokit'
 require 'gittop/array'
 
@@ -35,6 +34,6 @@ class Rating
     chart.select!{|k| !k.is_a?(Exception)}
     chart.sort_by!{|k| k[:counts]}.reverse!
     max_length = chart.map{|a| a[:account]}.max_by(&:length).length
-    chart.each{|e| printf "%-20s %s\n", e[:account], e[:counts] }
+    chart.each{|e| printf "%-#{max_length + 4}s %s\n", e[:account], e[:counts] }
   end
 end
